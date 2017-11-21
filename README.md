@@ -31,6 +31,7 @@ $ git clone https://github.com/facebookresearch/fastText.git
 $ cd fastText
 $ make
 ```
+If you are using mingw, you will build fail. Download the mingw.thread.h at [link](https://github.com/anhvanthe/fastText/edit/master/README.md), put it in fastText directory and change src/fasttext.cc at line 17 to #include "mingw.thread.h".
 
 This will produce object files for all the classes as well as the main binary `fasttext`.
 If you do not plan on using the default system-wide compiler, update the two macros defined at the beginning of the Makefile (CC and INCLUDES).
